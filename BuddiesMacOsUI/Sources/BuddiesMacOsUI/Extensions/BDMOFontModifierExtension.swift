@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension View {
+public extension View {
     
     func titleFont() -> some View {
         self.modifier(TitleFontModifier())

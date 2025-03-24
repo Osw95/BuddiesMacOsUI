@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension View {
+public extension View {
     
     func adaptiveSizeMacOSWindow() -> some View {
         self.modifier(DefaultWindowMacOSModifier())
