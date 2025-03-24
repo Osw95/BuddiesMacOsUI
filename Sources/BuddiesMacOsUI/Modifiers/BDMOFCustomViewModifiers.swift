@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// - MARK: View - Window
 struct DefaultWindowMacOSModifier: ViewModifier{
     func body(content: Content) -> some View {
         content
@@ -44,5 +45,15 @@ struct GeneralViewSizeMinsModifier: ViewModifier {
                    maxWidth: .infinity,
                    minHeight: minHeight,
                    maxHeight: .infinity)
+    }
+}
+
+// - MARK: TextField Modifiers
+struct GeneralTextFieldModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 20, weight: .bold, design: .rounded))
+            .multilineTextAlignment(.center)
+            .padding()
     }
 }

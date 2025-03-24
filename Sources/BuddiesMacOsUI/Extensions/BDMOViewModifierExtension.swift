@@ -9,6 +9,7 @@ import SwiftUI
 
 public extension View {
     
+    // - MARK: View - Window
     func adaptiveSizeMacOSWindow() -> some View {
         self.modifier(DefaultWindowMacOSModifier())
     }
@@ -23,5 +24,10 @@ public extension View {
     
     func adaptiveSizeMinsMod(minWidth: CGFloat = 150, minHeight: CGFloat = 150) -> some View {
         self.modifier(GeneralViewSizeMinsModifier(minWidth: minWidth, minHeight: minHeight))
+    }
+    
+    // - MARK: TextField Modifiers
+    func customTextfield() -> some View {
+        self.modifier(GeneralTextFieldModifier())
     }
 }
