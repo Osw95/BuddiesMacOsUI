@@ -18,8 +18,6 @@ struct DefaultWindowMacOSModifier: ViewModifier{
                 minHeight: 530,
                 idealHeight: 600,
                 maxHeight: .infinity)
-            .background(.ultraThinMaterial)
-            .blur(radius: 10)
     }
 }
 
@@ -37,8 +35,6 @@ struct GeneralViewSizeModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(.ultraThinMaterial)
-            .blur(radius: 10)
     }
 }
 
