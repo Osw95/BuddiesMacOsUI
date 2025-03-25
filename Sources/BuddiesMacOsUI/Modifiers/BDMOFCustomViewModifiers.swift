@@ -18,6 +18,8 @@ struct DefaultWindowMacOSModifier: ViewModifier{
                 minHeight: 530,
                 idealHeight: 600,
                 maxHeight: .infinity)
+            .background(.ultraThinMaterial)
+            .blur(radius: 10)
     }
 }
 
