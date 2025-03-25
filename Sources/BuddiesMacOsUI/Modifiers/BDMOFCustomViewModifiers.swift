@@ -36,6 +36,7 @@ struct GeneralViewSizeModifier: ViewModifier {
         content
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.ultraThinMaterial)
+            .blur(radius: 10)
     }
 }
 
