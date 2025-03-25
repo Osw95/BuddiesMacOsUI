@@ -18,6 +18,10 @@ public extension View {
         self.modifier(GeneralViewSizeModifier())
     }
     
+    func adaptiveWorkSize() -> some View {
+        self.modifier(GeneralWorkViewSizeModifier())
+    }
+    
     func adaptiveWidthSize() -> some View {
         self.modifier(GeneralViewWidthLeadSizeModifier())
     }
