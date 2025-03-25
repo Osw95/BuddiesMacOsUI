@@ -12,20 +12,30 @@ struct DefaultWindowMacOSModifier: ViewModifier{
     func body(content: Content) -> some View {
         content
             .frame(
-                minWidth: 800,
+                minWidth: 850,
                 idealWidth: 1000,
                 maxWidth: .infinity,
-                minHeight: 500,
+                minHeight: 530,
                 idealHeight: 600,
                 maxHeight: .infinity)
     }
 }
 
 
+struct GeneralWorkViewSizeModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(.all, 20)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.background)
+    }
+}
+
 struct GeneralViewSizeModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.ultraThinMaterial)
     }
 }
 
