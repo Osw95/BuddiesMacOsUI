@@ -35,6 +35,7 @@ struct GeneralViewSizeModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.all, 20)
     }
 }
 
