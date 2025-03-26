@@ -25,10 +25,10 @@ struct ModalWindowMacOSModifier: ViewModifier{
     func body(content: Content) -> some View {
         content
             .frame(
-                minWidth: 750,
-                maxWidth: 750,
-                minHeight: 430,
-                maxHeight: 430)
+                minWidth: 650,
+                maxWidth: 650,
+                minHeight: 450,
+                maxHeight: 450)
     }
 }
 
