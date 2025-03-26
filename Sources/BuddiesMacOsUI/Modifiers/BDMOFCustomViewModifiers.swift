@@ -21,6 +21,19 @@ struct DefaultWindowMacOSModifier: ViewModifier{
     }
 }
 
+struct ModalWindowMacOSModifier: ViewModifier{
+    func body(content: Content) -> some View {
+        content
+            .frame(
+                minWidth: 750,
+                idealWidth: 800,
+                maxWidth: .infinity,
+                minHeight: 430,
+                idealHeight: 500,
+                maxHeight: .infinity)
+    }
+}
+
 
 struct GeneralWorkViewSizeModifier: ViewModifier {
     func body(content: Content) -> some View {
@@ -31,11 +44,18 @@ struct GeneralWorkViewSizeModifier: ViewModifier {
     }
 }
 
-struct GeneralViewSizeModifier: ViewModifier {
+struct GeneralViewSizePaddingModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.all, 20)
+    }
+}
+
+struct GeneralViewSizeModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

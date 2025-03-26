@@ -14,7 +14,15 @@ public extension View {
         self.modifier(DefaultWindowMacOSModifier())
     }
     
+    func adaptiveSheetMacOsWindow() -> some View {
+        self.modifier(ModalWindowMacOSModifier())
+    }
+    
     func adaptiveSize() -> some View {
+        self.modifier(GeneralViewSizePaddingModifier())
+    }
+    
+    func adaptiveSizeNoPD() -> some View {
         self.modifier(GeneralViewSizeModifier())
     }
     
