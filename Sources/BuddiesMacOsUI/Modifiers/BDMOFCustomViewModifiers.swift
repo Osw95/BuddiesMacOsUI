@@ -27,8 +27,8 @@ struct ModalWindowMacOSModifier: ViewModifier{
             .frame(
                 minWidth: 650,
                 maxWidth: 650,
-                minHeight: 490,
-                maxHeight: 490)
+                minHeight: 500,
+                maxHeight: 500)
     }
 }
 
