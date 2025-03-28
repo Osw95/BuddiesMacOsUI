@@ -6,20 +6,26 @@
 //
 
 public struct BDMOAmountTextField: View {
-    @Binding public var text: String
-    public var textLabel: String
+    @Binding public var strText: String
+    private var strTextLabel: String
+    private var strPrompt: String
     
-    public init(text: Binding<String>, textLabel: String = "$0.00") {
-        _text = text
-        self.textLabel = textLabel
+    public init(strText: Binding<String>, strtextLabel: String = "$0.00", strPrompt: String = "$0.00") {
+        _strText = strText
+        self.strTextLabel = strtextLabel
+        self.strPrompt = strPrompt
     }
     
     public var body: some View {
-        TextField(textLabel, text: $text)
-            .onChange(of: text) { oldValue, newValue in
-                text = newValue.localizedCurrencyFormatted() ?? "-"
-            }
-            .customTextfield()
-            .autocorrectionDisabled()
+        HStack(spacing: .zero) {
+            Text(strTextLabel)
+                .font(.headline)
+            TextField("", text: $strText , prompt: Text(strPrompt))
+                .onChange(of: strText) { oldValue, newValue in
+                    strText = newValue.localizedCurrencyFormatted() ?? "-"
+                }
+                .customTextfield()
+                .autocorrectionDisabled()
+        }
     }
 }
