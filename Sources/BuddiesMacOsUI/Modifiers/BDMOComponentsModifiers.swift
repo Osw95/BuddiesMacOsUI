@@ -8,8 +8,8 @@
 // - MARK: TextField Modifiers
 
 struct GeneralTextFieldModifier: ViewModifier {
+    @FocusState var bIsFocused: Bool
     func body(content: Content) -> some View {
-        @FocusState var bIsFocused: Bool
         content
             .padding(.vertical, 3)
             .padding(.horizontal, 8)

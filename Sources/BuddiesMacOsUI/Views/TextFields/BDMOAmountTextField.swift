@@ -10,9 +10,9 @@ public struct BDMOAmountTextField: View {
     private var strTextLabel: String
     private var strPrompt: String
     
-    public init(strText: Binding<String>, strtextLabel: String = "$0.00", strPrompt: String = "$0.00") {
+    public init(strText: Binding<String>, strTextLabel: String, strPrompt: String = "$0.00") {
         _strText = strText
-        self.strTextLabel = strtextLabel
+        self.strTextLabel = strTextLabel
         self.strPrompt = strPrompt
     }
     
@@ -22,7 +22,7 @@ public struct BDMOAmountTextField: View {
                 .font(.headline)
             TextField("", text: $strText , prompt: Text(strPrompt))
                 .onChange(of: strText) { oldValue, newValue in
-                    strText = newValue.localizedCurrencyFormatted() ?? "-"
+                    strText = newValue.localizedCurrencyFormatted() ?? ""
                 }
                 .customTextfield()
                 .autocorrectionDisabled()
