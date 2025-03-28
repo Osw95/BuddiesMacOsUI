@@ -21,7 +21,8 @@ struct GeneralTextFieldModifier: ViewModifier {
                 .stroke(bIsFocused ? Color.blue : Color.gray.opacity(0), lineWidth: 1.5))
             .focused($bIsFocused)
             .animation(.easeInOut(duration: 0.2), value: bIsFocused)
-            .padding(.all, 5)
+            .padding(.vertical, 2.5)
+            .padding(.horizontal, 5)
     }
 }
 
