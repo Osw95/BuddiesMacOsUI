@@ -5,8 +5,6 @@
 //  Created by Oswaldo Ferral Mejia on 23/03/25.
 //
 
-import SwiftUI
-
 struct TitleFontModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
