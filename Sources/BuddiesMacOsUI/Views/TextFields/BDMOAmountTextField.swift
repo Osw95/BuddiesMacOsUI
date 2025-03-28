@@ -22,6 +22,7 @@ public struct BDMOAmountTextField: View {
                 .font(.headline)
             TextField("", text: $strText , prompt: Text(strPrompt))
                 .onChange(of: strText) { oldValue, newValue in
+                    guard !oldValue.elementsEqual(newValue) else { return }
                     strText = newValue.localizedCurrencyFormatted() ?? ""
                 }
                 .customTextfield()
