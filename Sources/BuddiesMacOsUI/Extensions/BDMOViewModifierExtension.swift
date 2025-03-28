@@ -42,4 +42,8 @@ public extension View {
     func customTextfield() -> some View {
         self.modifier(GeneralTextFieldModifier())
     }
+    
+    func formatedTextField() -> some View {
+        self.modifier(FormatedTextFieldModifier())
+    }
 }

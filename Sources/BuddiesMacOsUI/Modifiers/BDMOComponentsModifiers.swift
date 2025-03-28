@@ -26,6 +26,19 @@ struct GeneralTextFieldModifier: ViewModifier {
     }
 }
 
+struct FormatedTextFieldModifier: ViewModifier {
+ 
+    func body(content: Content) -> some View {
+        content
+            .padding(.vertical, 3)
+            .padding(.horizontal, 8)
+            .textFieldStyle(.plain)
+            .multilineTextAlignment(.trailing)
+            .padding(.vertical, 2.5)
+            .padding(.horizontal, 5)
+    }
+}
+
 
 // - MARK: General Image Modifiers
 
