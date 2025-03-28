@@ -27,20 +27,6 @@ struct GeneralTextFieldModifier: ViewModifier {
 }
 
 
-struct GeneralCurrencyTextFieldModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .padding(.vertical, 3)
-            .padding(.horizontal, 8)
-            .textFieldStyle(.plain)
-            .multilineTextAlignment(.trailing)
-            .clipShape(.rect(cornerRadius: 8))
-            .padding(.vertical, 2.5)
-            .padding(.horizontal, 5)
-    }
-}
-
-
 // - MARK: General Image Modifiers
 
 
