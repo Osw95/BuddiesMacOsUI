@@ -18,7 +18,6 @@ public struct BDMOPickerField <T: Identifiable & Hashable>: View {
     }
     
     public var body: some View {
-        
         HStack {
             Text("\(strTextLabel)")
                 .font(.headline)
@@ -36,7 +35,7 @@ public struct BDMOPickerField <T: Identifiable & Hashable>: View {
     
     @ViewBuilder
     private func getTextTagView(_ item: T) -> some View {
-        if let textDisplay = item as? String {
+        if let textDisplay = item.id as? String {
             Text(textDisplay).tag(item as T)
         } else {
             Text("No valid value")

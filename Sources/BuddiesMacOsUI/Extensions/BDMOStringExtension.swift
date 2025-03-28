@@ -106,4 +106,17 @@ public extension String {
         formatted.insert(".", at: formatted.index(formatted.endIndex, offsetBy: -2))
         return formatted
     }
+    
+    func localizedPercentageFormatted() -> String {
+        var clearPercent = self.replacingOccurrences(of: "%", with: "").replacingOccurrences(of: ".", with: "")
+        
+        if clearPercent.count >= 2 {
+            let index = clearPercent.index(clearPercent.endIndex, offsetBy: -2)
+            clearPercent.insert(".", at: index)
+        }
+        
+        guard let doublePercent = Double(clearPercent) else { return self }
+        let formattedPercent = "\(String(format: "%.2f", doublePercent))%"
+        return formattedPercent
+    }
 }
