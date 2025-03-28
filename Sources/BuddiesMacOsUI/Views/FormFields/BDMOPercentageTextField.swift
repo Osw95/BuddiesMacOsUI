@@ -21,13 +21,14 @@ public struct BDMOPercentageTextField: View {
             Text(strTextLabel)
                 .font(.headline)
             TextField("", text: $strText , prompt: Text(strPrompt))
+                .customTextfield()
                 .onChange(of: strText) { oldValue, newValue in
-                    guard !oldValue.elementsEqual(newValue) else { return }
                     strText = newValue.localizedPercentageFormatted()
                 }
             
         }
     }
-    
-    
+}
+#Preview {
+    BDMOPercentageTextField(strText: .constant(""), strTextLabel: "Datos", strPrompt: "00")
 }
