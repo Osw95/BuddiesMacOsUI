@@ -22,6 +22,8 @@ public struct BDMOAmountTextField: View {
             Text(strTextLabel)
                 .font(.headline)
             TextField("", text: $strText , prompt: Text(strPrompt))
+                .padding(.vertical, 3)
+                .padding(.horizontal, 8)
                 .background(bIsFocused ? .white.opacity(1) : .white.opacity(0.0))
                 .clipShape(.rect(cornerRadius: 8))
                 .overlay(RoundedRectangle(cornerRadius: 8)
